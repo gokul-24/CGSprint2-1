@@ -32,7 +32,7 @@ void test_SunnyCases(void) // Sunny Testcases
 	CU_ASSERT(check_BlackList(str3) == 0);
 }
 
-//rainy - invalid input strings are passed to the checkvalidity function and checked if 0 is returned or not.
+//rainy - invalid input strings are passed to the check_BlackList function and checked if 0 is returned or not.
 void test_RainyCases(void) // Rainy Testcases
 {
 	
