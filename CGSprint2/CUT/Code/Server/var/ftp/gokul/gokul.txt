@@ -1,0 +1,2 @@
+Hi from Gokul my file file location is in var/ftp/gokul
+

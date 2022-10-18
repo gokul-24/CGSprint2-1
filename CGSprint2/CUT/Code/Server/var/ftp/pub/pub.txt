@@ -1,0 +1,1 @@
+i am a file from public directory all anonymous users can only read me
