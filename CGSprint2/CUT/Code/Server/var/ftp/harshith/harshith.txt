@@ -1,2 +1,0 @@
-Hi from Harshith my file file location is in var/ftp/harshith
-
