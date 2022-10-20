@@ -1,0 +1,40 @@
+Command Line: Setting -retvalother redundant with current value
+../header/header.h:7: Include file <unistd.h> matches the name of a POSIX
+    library, but the POSIX library is not being used.  Consider using +posixlib
+    or +posixstrictlib to select the POSIX library, or -warnposix to suppress
+    this message.
+  Header name matches a POSIX header, but the POSIX library is not selected.
+  (Use -warnposixheaders to inhibit warning)
+< Location unknown >: Field name reused:
+  Code cannot be parsed.  For help on parse errors, see splint -help
+  parseerrors. (Use -syntax to inhibit warning)
+< Location unknown >: Previous use of
+server.c: (in function get_ip)
+server.c:15:28: Format argument 1 to sprintf (%d) expects int gets in_addr_t:
+                   new_addr.sin_addr.s_addr & 0xff
+  To allow arbitrary integral types to match any integral type, use
+  +matchanyintegral.
+   server.c:15:16: Corresponding format code
+server.c:15:60: Format argument 2 to sprintf (%d) expects int gets in_addr_t:
+                   (new_addr.sin_addr.s_addr & 0xff00) >> 8
+   server.c:15:19: Corresponding format code
+server.c:15:101: Format argument 3 to sprintf (%d) expects int gets in_addr_t:
+                    (new_addr.sin_addr.s_addr & 0xff0000) >> 16
+   server.c:15:22: Corresponding format code
+server.c:15:145: Format argument 4 to sprintf (%d) expects int gets in_addr_t:
+                    (new_addr.sin_addr.s_addr & 0xff000000) >> 24
+   server.c:15:25: Corresponding format code
+server.c: (in function authenticate)
+server.c:146:11: Observer storage returned without qualification:
+                    "Authenticated"
+  Observer storage is transferred to a non-observer reference. (Use
+  -observertrans to inhibit warning)
+   server.c:146:11: Storage becomes observer
+server.c:150:11: Observer storage returned without qualification:
+                    "Not Authenticated"
+   server.c:150:11: Storage becomes observer
+server.c:157:10: Observer storage returned without qualification:
+                    "Authenticated"
+   server.c:157:10: Storage becomes observer
+
+Finished checking --- 9 code warnings
