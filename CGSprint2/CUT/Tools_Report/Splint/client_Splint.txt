@@ -1,0 +1,33 @@
+Splint 3.1.2 --- 21 Feb 2021
+
+Command Line: Setting -retvalother redundant with current value
+Command Line: Unrecognized option: -typ
+  A flag is not recognized or used in an incorrect way (Use -badflag to inhibit
+  warning)
+../header/header.h:4: Include file <unistd.h> matches the name of a POSIX
+    library, but the POSIX library is not being used.  Consider using +posixlib
+    or +posixstrictlib to select the POSIX library, or -warnposix to suppress
+    this message.
+  Header name matches a POSIX header, but the POSIX library is not selected.
+  (Use -warnposixheaders to inhibit warning)
+< Location unknown >: Field name reused:
+  Code cannot be parsed.  For help on parse errors, see splint -help
+  parseerrors. (Use -syntax to inhibit warning)
+< Location unknown >: Previous use of
+client.c: (in function upload)
+client.c:17:22: Initial value of data[0] is type int, expects char: 0
+  Types are incompatible. (Use -type to inhibit warning)
+client.c: (in function download)
+client.c:45:5: Assignment of ssize_t to int: n = recv(sockfd, buffer, 1024, 0)
+  To allow arbitrary integral types to match any integral type, use
+  +matchanyintegral.
+client.c: (in function main)
+client.c:123:3: Assignment of int to in_port_t: server_addr.sin_port = port
+client.c:126:61: Function connect expects arg 3 to be socklen_t gets size_t:
+                    sizeof((server_addr))
+*** Segmentation Violation
+*** Location (not trusted): client.c:193:24
+*** Last code point: transferChecks.c:3445
+*** Previous code point: transferChecks.c:3437
+*** Please report bug to submit@bugs.debian.org (via reportbug)
+*** A useful bug report should include everything we need to reproduce the bug.
