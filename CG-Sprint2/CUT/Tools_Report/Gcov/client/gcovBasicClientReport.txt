@@ -1,3 +1,0 @@
-File 'client.c'
-Lines executed:84.72% of 144
-Creating 'client.c.gcov'

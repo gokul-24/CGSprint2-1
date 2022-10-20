@@ -1,3 +1,0 @@
-File 'server.c'
-Lines executed:77.78% of 153
-Creating 'server.c.gcov'

@@ -1,2 +1,0 @@
-Hi from sandeep my file file location is in var/ftp/sandeep
-

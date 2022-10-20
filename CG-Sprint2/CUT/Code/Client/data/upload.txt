@@ -1,1 +1,0 @@
-if any anonymous user uploads this file to the server it is going to be stored in the var/ftp/upload directory
